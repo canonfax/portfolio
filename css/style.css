@@ -1,0 +1,69 @@
+/* ═══════════════════════════════════════════
+   Gergely Dániel Portfolio · style.css
+   Közös alap – csak globális stílusok
+   ═══════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* ── Változók ── */
+:root {
+    --white:      #ffffff;
+    --off:        #f7f8fa;
+    --off2:       #f0f2f5;
+    --gray-100:   #e8eaed;
+    --gray-200:   #d1d5db;
+    --gray-400:   #9ca3af;
+    --gray-600:   #6b7280;
+    --gray-800:   #1f2937;
+    --ink:        #0d1117;
+    --blue:       #2563eb;
+    --blue-dark:  #1d4ed8;
+    --blue-light: #60a5fa;
+    --blue-pale:  #eff6ff;
+    --blue-mid:   #bfdbfe;
+    --green:      #10b981;
+    --orange:     #f59e0b;
+    --shimano:    #0066cc;
+
+    --font-display: 'Syne', sans-serif;
+    --font-body:    'Instrument Sans', sans-serif;
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,.06);
+    --shadow:    0 4px 20px rgba(0,0,0,.08);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+    --shadow-xl: 0 24px 60px rgba(0,0,0,.15);
+
+    --r:     8px;
+    --r2:    16px;
+    --r3:    24px;
+    --t:     .2s ease;
+    --nav-h: 72px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
+body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: var(--font-body); cursor: pointer; }
+
+/* ── Tipográfia ── */
+.h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 800; line-height: 1.05;
+    letter-spacing: -.03em; color: var(--ink);
+}
+.h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800; line-height: 1.1;
+    letter-spacing: -.02em; color: var(--ink);
+}
