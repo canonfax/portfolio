@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapcsolat – Gergely Dániel</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/kapcsolat.css">
+</head>
+<body data-page="kapcsolat">
+
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Gergely <span>Dániel</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html"          data-page="home">Főoldal</a></li>
+        <li><a href="rolam.html"             data-page="rolam">Rólam</a></li>
+        <li><a href="szolgaltatasok.html"    data-page="szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="blog.html"              data-page="blog">Blog</a></li>
+        <li><a href="kapcsolat.html"         data-page="kapcsolat" class="nav-cta">Kapcsolat</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">🏠 Főoldal</a>
+    <a href="rolam.html">👤 Rólam</a>
+    <a href="szolgaltatasok.html">🔧 Szolgáltatások</a>
+    <a href="blog.html">📝 Blog</a>
+    <a href="kapcsolat.html">✉️ Kapcsolat</a>
+  </div>
+
+  <div class="page">
+
+    <!-- HERO -->
+    <section class="kapcsolat-hero">
+      <div class="kapcsolat-hero-glow"></div>
+      <div class="kapcsolat-hero-inner">
+
+        <div class="animate-up">
+          <div class="label">Kapcsolat</div>
+          <h1 class="h1">Írj bátran,<br>válaszolok!</h1>
+          <p class="lead">Legyen szó kerékpárszervizről, webprojektről, SAS megoldásról vagy csak egy kérdésről — szívesen hallom. Általában 24 órán belül válaszolok.</p>
+        </div>
+
+        <div class="contact-items animate-up delay-2">
+          <div class="contact-item">
+            <div class="contact-item-ico">📧</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-val">
+                <a href="mailto:canonfax.danielg@gmail.com">canonfax.danielg@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-ico">📍</div>
+            <div>
+              <div class="contact-item-label">Helyszín</div>
+              <div class="contact-item-val">Gyula, Magyarország</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-ico">🚲</div>
+            <div>
+              <div class="contact-item-label">Szerviz</div>
+              <div class="contact-item-val">Shimano Service Center</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-ico">⏱️</div>
+            <div>
+              <div class="contact-item-label">Válaszidő</div>
+              <div class="contact-item-val">Általában 24 órán belül</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="kapcsolat-form-section">
+      <div class="form-inner">
+        <div class="label">Üzenetküldés</div>
+        <h2 class="h2">Küldd el üzeneted!</h2>
+        <p class="form-intro-text">Töltsd ki az alábbi űrlapot és hamarosan jelentkezem.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label class="form-label" for="cf-nev">Neved *</label>
+              <input type="text" class="form-input" id="cf-nev" placeholder="Kovács János" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Email cím *</label>
+              <input type="email" class="form-input" id="cf-email" placeholder="pelda@email.hu" required>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label class="form-label" for="cf-tema">Téma</label>
+              <select class="form-input" id="cf-tema">
+                <option value="">— Válassz témát —</option>
+                <option>🚲 Kerékpárszerviz megkeresés</option>
+                <option>💻 Webfejlesztési projekt</option>
+                <option>📊 SAS programozás</option>
+                <option>❓ Tanács / kérdés</option>
+                <option>💬 Egyéb</option>
+              </select>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label class="form-label" for="cf-uzenet">Üzeneted *</label>
+              <textarea class="form-input" id="cf-uzenet" placeholder="Írj néhány sort — miről van szó, miben tudok segíteni..." required></textarea>
+            </div>
+
+          </div>
+
+          <div class="form-submit-row">
+            <div class="form-note">* Kötelező mezők. Az adataidat bizalmasan kezelem.</div>
+            <button type="submit" class="btn btn-blue">📨 Üzenet küldése</button>
+          </div>
+
+          <div class="form-success-msg" id="form-success">
+            ✅ Köszönöm! Az email programod megnyílik az üzenettel. Hamarosan válaszolok!
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="faq-inner">
+        <div class="label">Gyakori kérdések</div>
+        <h2 class="h2">Amit sokan kérdeznek.</h2>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-q">
+              Mennyi idő alatt végzel egy általános szervizzel?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Az általános szerviz általában 1-2 napot vesz igénybe. Ha sürgős és van szabad kapacitás, akár aznap is elvégzem. Előre egyeztessünk!</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              Vállalsz weboldalt cégeknek is?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Igen, kisebb cégek, vállalkozók bemutatkozó weboldalait és egyszerűbb webalkalmazásait szívesen elvállalom mellékállásban. Egyeztessük az igényeket!</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              Miért érdemes Shimano Service Centerhez vinni a kerékpárt?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">A T.E.C. certificált szerelők Shimano által ellenőrzött képzésen vesznek részt. Ez garantálja, hogy a technikus ismeri a legújabb rendszereket, a helyes beállítási eljárásokat és a Shimano eredeti alkatrészeket használja.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              Elvégzel nem Shimano alkatrészek javítását is?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Igen — a legtöbb kerékpárjavítást elvégzem márkatól függetlenül. A Shimano certifikációm a tudásszintet jelzi, nem a kizárólagosságot.</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">
+              Mennyibe kerül egy weboldal?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">Az ár az igényektől függ — egy egyszerű bemutatkozó oldaltól egy összetettebb webalkalmazásig nagy különbségek vannak. Írj a részletekkel és készítek árajánlatot!</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Gergely <span>Dániel</span></div>
+      <div class="footer-links">
+        <a href="../index.html">Főoldal</a>
+        <a href="rolam.html">Rólam</a>
+        <a href="szolgaltatasok.html">Szolgáltatások</a>
+        <a href="blog.html">Blog</a>
+        <a href="mailto:canonfax.danielg@gmail.com">canonfax.danielg@gmail.com</a>
+      </div>
+      <div>© 2025 Gergely Dániel · Gyula</div>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/kapcsolat.js"></script>
+</body>
+</html>

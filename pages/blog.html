@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog &amp; Tanácsok – Gergely Dániel</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body data-page="blog">
+
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Gergely <span>Dániel</span></a>
+      <ul class="nav-links">
+        <li><a href="../index.html"          data-page="home">Főoldal</a></li>
+        <li><a href="rolam.html"             data-page="rolam">Rólam</a></li>
+        <li><a href="szolgaltatasok.html"    data-page="szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="blog.html"              data-page="blog">Blog</a></li>
+        <li><a href="kapcsolat.html"         data-page="kapcsolat" class="nav-cta">Kapcsolat</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="../index.html">🏠 Főoldal</a>
+    <a href="rolam.html">👤 Rólam</a>
+    <a href="szolgaltatasok.html">🔧 Szolgáltatások</a>
+    <a href="blog.html">📝 Blog</a>
+    <a href="kapcsolat.html">✉️ Kapcsolat</a>
+  </div>
+
+  <div class="page">
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <div class="label">Blog &amp; Tanácsok</div>
+        <h1 class="h1">Tapasztalatok<br>megosztva.</h1>
+        <p class="lead">Kerékpárszervizből, webfejlesztésből és SAS programozásból szerzett tapasztalataimat szívesen megosztom. Ha kérdésed van, írj bátran!</p>
+      </div>
+    </section>
+
+    <!-- BLOG CIKKEK -->
+    <section class="blog-section">
+      <div class="blog-section-inner">
+        <div class="label">Cikkek</div>
+        <h2 class="h2">Legutóbbi bejegyzések.</h2>
+
+        <div class="blog-grid">
+
+          <article class="blog-card animate-up" onclick="openPost('hidraulikus')">
+            <div class="blog-card-img" data-bg-color="#eff6ff">
+              <div class="blog-card-img-bg">🛑</div>
+              <div class="blog-card-img-ico">🔧</div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-cat" data-color="blue">Kerékpárszerviz</span>
+                <span class="blog-card-date">2025. nov.</span>
+              </div>
+              <h3 class="blog-card-title">Hidraulikus fék légtelenítés – lépésről lépésre</h3>
+              <p class="blog-card-desc">A hidraulikus fékrendszer légtelenítése félelmetesnek tűnhet, de a megfelelő eszközökkel és türelemmel bárki elvégezheti.</p>
+              <div class="blog-card-link">Elolvasom <span>→</span></div>
+            </div>
+          </article>
+
+          <article class="blog-card animate-up delay-1" onclick="openPost('di2')">
+            <div class="blog-card-img" data-bg-color="#ecfdf5">
+              <div class="blog-card-img-bg">⚡</div>
+              <div class="blog-card-img-ico">🔌</div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-cat" data-color="green">Shimano Di2</span>
+                <span class="blog-card-date">2025. dec.</span>
+              </div>
+              <h3 class="blog-card-title">Mi az a Shimano Di2? – Elektronikus váltók világa</h3>
+              <p class="blog-card-desc">Az elektronikus váltórendszerek forradalmasították a kerékpározást. De megéri a befektetést?</p>
+              <div class="blog-card-link">Elolvasom <span>→</span></div>
+            </div>
+          </article>
+
+          <article class="blog-card animate-up delay-2" onclick="openPost('webapp')">
+            <div class="blog-card-img" data-bg-color="#f0f9ff">
+              <div class="blog-card-img-bg">💻</div>
+              <div class="blog-card-img-ico">🚀</div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-cat" data-color="cyan">Webfejlesztés</span>
+                <span class="blog-card-date">2026. jan.</span>
+              </div>
+              <h3 class="blog-card-title">Hogyan készítettem szerviz munkalap rendszert Node.js-sel?</h3>
+              <p class="blog-card-desc">A GyulaBringa munkalap rendszer tervezésétől a megvalósításig — hogyan lehet egy valós igényt egyszerű webalkalmazással megoldani?</p>
+              <div class="blog-card-link">Elolvasom <span>→</span></div>
+            </div>
+          </article>
+
+          <article class="blog-card animate-up" onclick="openPost('grx')">
+            <div class="blog-card-img" data-bg-color="#fff7ed">
+              <div class="blog-card-img-bg">🌄</div>
+              <div class="blog-card-img-ico">🪨</div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-cat" data-color="orange">Gravel</span>
+                <span class="blog-card-date">2025. nov.</span>
+              </div>
+              <h3 class="blog-card-title">Shimano GRX – A gravel világ vezető rendszere</h3>
+              <p class="blog-card-desc">A GRX sorozat bemutatása T.E.C. certificált szemszögből. Miben más a gravel hajtáslánc a country road rendszertől?</p>
+              <div class="blog-card-link">Elolvasom <span>→</span></div>
+            </div>
+          </article>
+
+          <article class="blog-card animate-up delay-1" onclick="openPost('sas')">
+            <div class="blog-card-img" data-bg-color="#fdf4ff">
+              <div class="blog-card-img-bg">📊</div>
+              <div class="blog-card-img-ico">📈</div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-cat" data-color="purple">SAS programozás</span>
+                <span class="blog-card-date">2026. jan.</span>
+              </div>
+              <h3 class="blog-card-title">Automatizált SAS riport – így spórolhatsz órákat minden héten</h3>
+              <p class="blog-card-desc">Ha manuálisan készítesz heti vagy havi riportokat, nagy valószínűséggel automatizálható.</p>
+              <div class="blog-card-link">Elolvasom <span>→</span></div>
+            </div>
+          </article>
+
+          <article class="blog-card animate-up delay-2" onclick="openPost('karbantartas')">
+            <div class="blog-card-img" data-bg-color="#f0fdf4">
+              <div class="blog-card-img-bg">🚲</div>
+              <div class="blog-card-img-ico">🛠️</div>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-cat" data-color="green">Kerékpárszerviz</span>
+                <span class="blog-card-date">2026. febr.</span>
+              </div>
+              <h3 class="blog-card-title">5 dolog amit minden kerékpáros tudnia kellene</h3>
+              <p class="blog-card-desc">Nem kell szerelőnek lenni ahhoz, hogy a kerékpárod megfelelően tartsd karban.</p>
+              <div class="blog-card-link">Elolvasom <span>→</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GYORS TIPPEK -->
+    <section class="tips-section">
+      <div class="tips-inner">
+        <div class="label">Gyors tippek</div>
+        <h2 class="h2">Hasznos tanácsok.</h2>
+
+        <div class="tips-grid">
+          <div class="tip-card animate-up">
+            <div class="tip-ico">🔗</div>
+            <div>
+              <div class="tip-title">Lánc kenése: kevesebb több</div>
+              <p class="tip-text">A felesleges olaj több port gyűjt, mint a száraz lánc. Egy sor kenőanyag elegendő, a felesleget le kell törlni.</p>
+            </div>
+          </div>
+          <div class="tip-card animate-up delay-1">
+            <div class="tip-ico">💨</div>
+            <div>
+              <div class="tip-title">Guminyomás hetente</div>
+              <p class="tip-text">A gumikat hetente ellenőrizd. A helyes nyomás megakadályozza a csípődefektet és kíméli az abroncsot.</p>
+            </div>
+          </div>
+          <div class="tip-card animate-up delay-2">
+            <div class="tip-ico">🎯</div>
+            <div>
+              <div class="tip-title">Fék beállítás jele</div>
+              <p class="tip-text">Ha a fékkar a kormányig kell húzni mielőtt fékez, ideje beállítani. Ne várj a teljes elkopásig!</p>
+            </div>
+          </div>
+          <div class="tip-card animate-up delay-3">
+            <div class="tip-ico">⚙️</div>
+            <div>
+              <div class="tip-title">Váltó hangja figyelmeztet</div>
+              <p class="tip-text">Ha a váltás nem sima vagy csikorgó hangot hallasz, a bowden feszessége vagy a váltó állítása az első gyanúsított.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- POST MODAL -->
+  <div class="post-overlay" id="post-overlay">
+    <div class="post-modal" id="post-modal">
+      <div class="post-modal-header">
+        <div id="post-modal-title" class="post-modal-title"></div>
+        <button class="post-modal-close" id="post-modal-close" aria-label="Bezárás">✕</button>
+      </div>
+      <div class="post-modal-body" id="post-modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Gergely <span>Dániel</span></div>
+      <div class="footer-links">
+        <a href="../index.html">Főoldal</a>
+        <a href="rolam.html">Rólam</a>
+        <a href="szolgaltatasok.html">Szolgáltatások</a>
+        <a href="kapcsolat.html">Kapcsolat</a>
+        <a href="mailto:canonfax.danielg@gmail.com">canonfax.danielg@gmail.com</a>
+      </div>
+      <div>© 2025 Gergely Dániel · Gyula</div>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/blog.js"></script>
+</body>
+</html>
