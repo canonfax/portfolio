@@ -1,0 +1,169 @@
+/* ═══════════════════════════════════════════
+   szolgaltatasok.css – Szolgáltatások oldal
+   ═══════════════════════════════════════════ */
+
+/* ── Oldal hero ── */
+.page-hero {
+  background: var(--off);
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 3rem);
+  border-bottom: 1px solid var(--gray-100);
+  text-align: center;
+}
+
+.page-hero-inner { max-width: 1280px; margin: 0 auto; }
+.page-hero .h1   { margin-bottom: 1rem; }
+.page-hero .lead { max-width: 580px; margin: 0 auto; }
+
+/* ── Szervíz szekciók ── */
+.svc-section {
+  padding: clamp(4rem, 7vw, 6rem) clamp(1.5rem, 5vw, 3rem);
+}
+
+.svc-section-alt { background: var(--off); }
+
+.svc-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.svc-grid-reverse { direction: rtl; }
+.svc-grid-reverse > * { direction: ltr; }
+
+/* ── Vizuális blokk ── */
+.svc-visual {
+  background: var(--white);
+  border-radius: var(--r3);
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.svc-visual-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+  opacity: .07;
+}
+
+.svc-visual-ico {
+  position: relative;
+  z-index: 1;
+  font-size: 6rem;
+}
+
+/* ── Szervíz tartalom ── */
+.svc-content p {
+  font-size: 1rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.svc-items {
+  margin: 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.svc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  padding: .85rem 1rem;
+  background: var(--off);
+  border-radius: var(--r);
+  border: 1px solid var(--gray-100);
+}
+
+.svc-item-ico  { font-size: 1.2rem; flex-shrink: 0; }
+
+.svc-item-name {
+  font-weight: 700;
+  font-size: .88rem;
+  color: var(--ink);
+  display: block;
+  margin-bottom: .15rem;
+}
+
+.svc-item-desc {
+  font-size: .82rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.svc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: 1.75rem;
+}
+
+/* ── Árlista szekció ── */
+.pricing-section {
+  background: var(--ink);
+  padding: clamp(4rem, 7vw, 6rem) clamp(1.5rem, 5vw, 3rem);
+}
+
+.pricing-inner { max-width: 1280px; margin: 0 auto; }
+
+.pricing-inner .label { color: rgba(255,255,255,.5); }
+.pricing-inner .h2    { color: var(--white); margin-bottom: 1rem; }
+.pricing-inner .lead  { color: rgba(255,255,255,.6); max-width: 540px; margin-bottom: 3rem; }
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.pricing-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--r2);
+  padding: 1.75rem;
+}
+
+.pricing-card-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: .5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  font-size: .82rem;
+}
+
+.pricing-item:last-child { border-bottom: none; }
+.pricing-item-name  { color: rgba(255,255,255,.7); }
+.pricing-item-price { color: var(--white); font-weight: 700; font-family: monospace; white-space: nowrap; }
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .svc-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .svc-grid-reverse { direction: ltr; }
+  .pricing-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}

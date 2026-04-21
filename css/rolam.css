@@ -1,0 +1,272 @@
+/* ═══════════════════════════════════════════
+   rolam.css – Rólam & Képesítések oldal
+   ═══════════════════════════════════════════ */
+
+/* ── Oldal hero ── */
+.rolam-hero {
+  background: var(--off);
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 3rem);
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.rolam-hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.rolam-hero-text p {
+  font-size: 1.05rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.rolam-hero-text p strong { color: var(--ink); }
+
+.rolam-hero-btns {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.rolam-hero-img {
+  border-radius: var(--r3);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  aspect-ratio: 4/5;
+}
+
+.rolam-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ── Értékek ── */
+.ertekek { background: var(--white); }
+
+.ertekek-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.ertek-card {
+  background: var(--off);
+  border-radius: var(--r2);
+  padding: 1.75rem;
+  border: 1px solid var(--gray-100);
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.ertek-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.ertek-ico   { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+.ertek-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: .5rem; }
+.ertek-desc  { font-size: .82rem; color: var(--gray-600); line-height: 1.6; }
+
+/* ── Képesítések ── */
+.kepesitesek { background: var(--off); }
+
+.kepesitesek-header {
+  max-width: 1280px;
+  margin: 0 auto 3rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tec-logo {
+  background: var(--ink);
+  color: var(--white);
+  padding: .6rem 1.25rem;
+  border-radius: var(--r);
+  font-family: var(--font-display);
+  font-size: .9rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  line-height: 1.3;
+}
+
+.tec-logo span { color: #5bc8f5; }
+.tec-logo small { font-size: .6rem; font-weight: 400; letter-spacing: .06em; opacity: .7; }
+
+.cert-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* ── Cert kártya ── */
+.cert-card {
+  background: var(--white);
+  border-radius: var(--r2);
+  overflow: hidden;
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+  transition: all .3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.cert-card-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cert-cat {
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: .2rem;
+}
+
+.cert-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.cert-date {
+  font-size: .72rem;
+  color: var(--gray-400);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cert-card-body { padding: 0 1.5rem 1.25rem; }
+
+.cert-courses { display: flex; flex-direction: column; gap: .35rem; }
+
+.cert-course {
+  font-size: .78rem;
+  color: var(--gray-600);
+  display: flex;
+  align-items: flex-start;
+  gap: .4rem;
+  line-height: 1.4;
+}
+
+.cert-course::before {
+  content: '→';
+  color: var(--blue);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: .05rem;
+}
+
+/* Cert kategória színek */
+.cert-road   .cert-card-header { background: linear-gradient(135deg, #eff6ff, #dbeafe); }
+.cert-road   .cert-cat { color: var(--blue); }
+.cert-mtb    .cert-card-header { background: linear-gradient(135deg, #f0fdf4, #dcfce7); }
+.cert-mtb    .cert-cat { color: var(--green); }
+.cert-gravel .cert-card-header { background: linear-gradient(135deg, #fff7ed, #fed7aa); }
+.cert-gravel .cert-cat { color: #ea580c; }
+.cert-life   .cert-card-header { background: linear-gradient(135deg, #fdf4ff, #f3e8ff); }
+.cert-life   .cert-cat { color: #9333ea; }
+.cert-tech   .cert-card-header { background: linear-gradient(135deg, #f0f9ff, #e0f2fe); }
+.cert-tech   .cert-cat { color: #0284c7; }
+
+/* ── Készségek ── */
+.keszsegek { background: var(--white); }
+
+.keszsegek-intro {
+  max-width: 560px;
+  margin-bottom: 3rem;
+}
+
+.kesz-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.kesz-group {
+  background: var(--off);
+  border-radius: var(--r2);
+  padding: 1.75rem;
+  border: 1px solid var(--gray-100);
+}
+
+.kesz-group-title {
+  font-family: var(--font-display);
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.kesz-bar-row { margin-bottom: 1rem; }
+.kesz-bar-row:last-child { margin-bottom: 0; }
+
+.kesz-bar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .4rem;
+}
+
+.kesz-bar-name { font-size: .85rem; font-weight: 500; color: var(--gray-800); }
+.kesz-bar-pct  { font-size: .75rem; color: var(--gray-400); font-family: monospace; }
+
+.kesz-track {
+  height: 6px;
+  background: var(--gray-200);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.kesz-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1.2s ease;
+}
+
+.fill-blue   { background: linear-gradient(90deg, var(--blue), var(--blue-light)); }
+.fill-green  { background: linear-gradient(90deg, var(--green), #34d399); }
+.fill-orange { background: linear-gradient(90deg, var(--orange), #fbbf24); }
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .rolam-hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .rolam-hero-img { aspect-ratio: 4/3; max-height: 380px; order: -1; }
+  .ertekek-grid { grid-template-columns: repeat(2, 1fr); }
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+  .kesz-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .ertekek-grid { grid-template-columns: 1fr 1fr; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .kesz-grid { grid-template-columns: 1fr; }
+}
