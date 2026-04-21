@@ -7,10 +7,10 @@
 
 /* ── Változók ── */
 :root {
-  --white:      #ffffff;
-  --off:        #f7f8fa;
-  --off2:       #f0f2f5;
-  --gray-100:   #e8eaed;
+  --white:      #fdf8f2;
+  --off:        #f5ede0;
+  --off2:       #ede0ce;
+  --gray-100:   #e2d5c3;
   --gray-200:   #d1d5db;
   --gray-400:   #9ca3af;
   --gray-600:   #6b7280;
@@ -189,20 +189,20 @@ button { font-family: var(--font-body); cursor: pointer; }
   padding: .45rem .9rem; border-radius: 6px;
   transition: all var(--t); position: relative;
 }
-.nav-links a:hover { color: var(--ink); background: var(--off2); }
-.nav-links a.active { color: var(--ink); }
+.nav-links a:hover { color: var(--blue); background: var(--blue-pale); }
+.nav-links a.active { color: var(--blue); font-weight: 600; }
 .nav-links a.active::after {
-  content: ''; position: absolute; bottom: 2px; left: 50%;
+  
   transform: translateX(-50%);
   width: 4px; height: 4px; border-radius: 50%; background: var(--blue);
 }
 .nav-cta {
-  background: var(--ink) !important; color: var(--white) !important;
+  background: var(--blue) !important; color: var(--white) !important;
   padding: .5rem 1.1rem !important; border-radius: 50px !important;
   font-weight: 600 !important;
 }
 .nav-cta:hover {
-  background: var(--blue) !important;
+  background: var(--blue-dark) !important;
   transform: translateY(-1px);
 }
 
