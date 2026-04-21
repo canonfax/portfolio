@@ -291,3 +291,101 @@ footer {
 @media (max-width: 600px) {
   .section { padding: 3rem 1.25rem; }
 }
+
+/* ── Cookie sáv ── */
+#cookie-banner {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120px);
+  z-index: 5000;
+  width: calc(100% - 3rem);
+  max-width: 860px;
+  background: var(--ink);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--r2);
+  box-shadow: 0 8px 40px rgba(0,0,0,.4);
+  transition: transform .4s cubic-bezier(.17,.67,.34,1.2);
+}
+
+#cookie-banner.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+.cookie-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cookie-banner-text {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .85rem;
+  color: rgba(255,255,255,.75);
+  flex: 1;
+  line-height: 1.5;
+}
+
+.cookie-banner-ico { font-size: 1.3rem; flex-shrink: 0; }
+
+.cookie-banner-link {
+  color: var(--blue-light);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity var(--t);
+}
+
+.cookie-banner-link:hover { opacity: .8; }
+
+.cookie-banner-btns {
+  display: flex;
+  gap: .5rem;
+  flex-shrink: 0;
+}
+
+.cookie-btn-accept {
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  padding: .5rem 1.25rem;
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--t);
+}
+
+.cookie-btn-accept:hover {
+  background: var(--blue-light);
+  transform: translateY(-1px);
+}
+
+.cookie-btn-decline {
+  background: transparent;
+  color: rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50px;
+  padding: .5rem 1.25rem;
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--t);
+}
+
+.cookie-btn-decline:hover {
+  color: rgba(255,255,255,.8);
+  border-color: rgba(255,255,255,.3);
+}
+
+@media (max-width: 600px) {
+  #cookie-banner { bottom: 0; left: 0; right: 0; width: 100%; border-radius: var(--r2) var(--r2) 0 0; transform: translateX(0) translateY(120px); }
+  #cookie-banner.show { transform: translateX(0) translateY(0); }
+  .cookie-banner-inner { padding: 1rem; }
+  .cookie-banner-btns { width: 100%; }
+  .cookie-btn-accept, .cookie-btn-decline { flex: 1; text-align: center; }
+}

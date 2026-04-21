@@ -1,0 +1,224 @@
+/* ═══════════════════════════════════════════
+   legal.css – Impresszum & Cookie oldalak
+   ═══════════════════════════════════════════ */
+
+/* ── Hero ── */
+.legal-hero {
+  background: var(--off);
+  padding: clamp(3rem, 5vw, 4.5rem) clamp(1.5rem, 5vw, 3rem);
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.legal-hero-inner { max-width: 800px; margin: 0 auto; }
+.legal-hero .h1   { margin-bottom: .5rem; }
+
+.legal-date {
+  font-size: .82rem;
+  color: var(--gray-400);
+  margin-top: .5rem;
+}
+
+/* ── Fő szekció ── */
+.legal-section {
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 3rem);
+  background: var(--white);
+}
+
+.legal-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Kártya ── */
+.legal-card {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--r2);
+  padding: 1.75rem 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.legal-card-highlight {
+  background: var(--blue-pale);
+  border-color: var(--blue-mid);
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.legal-highlight-ico { font-size: 2rem; flex-shrink: 0; }
+
+/* ── Tipográfia ── */
+.legal-h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.legal-card p {
+  font-size: .92rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: .75rem;
+}
+
+.legal-card p:last-child { margin-bottom: 0; }
+
+.legal-card p strong { color: var(--ink); }
+
+.legal-note {
+  font-size: .8rem !important;
+  color: var(--gray-400) !important;
+  font-style: italic;
+  margin-top: .75rem !important;
+}
+
+/* ── Táblázat sorok ── */
+.legal-table {
+  border: 1px solid var(--gray-100);
+  border-radius: var(--r);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.legal-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.legal-row:last-child { border-bottom: none; }
+
+.legal-key {
+  background: var(--off);
+  padding: .65rem 1rem;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--gray-600);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  border-right: 1px solid var(--gray-100);
+}
+
+.legal-val {
+  padding: .65rem 1rem;
+  font-size: .88rem;
+  color: var(--gray-800);
+}
+
+.legal-val a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.legal-val a:hover { text-decoration: underline; }
+
+/* ── Cookie táblázat ── */
+.cookie-table {
+  border: 1px solid var(--gray-100);
+  border-radius: var(--r);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  font-size: .85rem;
+}
+
+.cookie-table-head {
+  display: grid;
+  grid-template-columns: 160px 100px 1fr 80px;
+  background: var(--off2);
+  padding: .6rem 1rem;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--gray-600);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  gap: 1rem;
+}
+
+.cookie-table-row {
+  display: grid;
+  grid-template-columns: 160px 100px 1fr 80px;
+  padding: .75rem 1rem;
+  gap: 1rem;
+  align-items: center;
+  border-top: 1px solid var(--gray-100);
+  color: var(--gray-700);
+}
+
+.cookie-name {
+  font-family: monospace;
+  font-size: .82rem;
+  background: var(--off2);
+  padding: .2rem .5rem;
+  border-radius: 4px;
+  color: var(--blue);
+  white-space: nowrap;
+}
+
+/* ── Böngésző linkek ── */
+.browser-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1rem 0;
+}
+
+.browser-link {
+  display: inline-flex;
+  align-items: center;
+  padding: .4rem .9rem;
+  background: var(--off);
+  border: 1px solid var(--gray-200);
+  border-radius: 50px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  text-decoration: none;
+  transition: all var(--t);
+}
+
+.browser-link:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: var(--blue-pale);
+}
+
+/* ── Kapcsolat gomb ── */
+.legal-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: .75rem;
+  padding: .65rem 1.25rem;
+  background: var(--off);
+  border: 1.5px solid var(--gray-200);
+  border-radius: 50px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  text-decoration: none;
+  transition: all var(--t);
+}
+
+.legal-contact-btn:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: var(--blue-pale);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .legal-card { padding: 1.25rem; }
+  .legal-row { grid-template-columns: 120px 1fr; }
+  .cookie-table-head,
+  .cookie-table-row { grid-template-columns: 1fr 1fr; }
+  .cookie-table-head span:nth-child(3),
+  .cookie-table-row span:nth-child(3),
+  .cookie-table-head span:nth-child(4),
+  .cookie-table-row span:nth-child(4) { display: none; }
+}
